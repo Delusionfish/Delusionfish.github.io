@@ -1,0 +1,66 @@
+		*{
+			padding: 0; /* 内边距 */
+			margin: 0;/* 重置外边距 */
+		}
+		body{
+			/* position: fixed; */
+		}
+		.bgbox{
+			height: 100vh;
+			width: 100vw;
+			position:fixed;/* 位置 固定 */
+		}
+		#bg1{
+			z-index:-1;
+			background-image: url(../img/bg/bg1.jpg);/* 图片链接 */
+			background-repeat: no-repeat;/* 方式不重复 */
+			background-size: cover;/* 图片大小覆盖整个网页 */
+			background-position: bottom;/* 位置底部 */
+			
+			/* 无用 */
+			animation-name: divbg1;/* 动画执行名字 */
+			animation-timing-function: ease-in-out;/* 动画执行速率  以低速开始结尾 */
+			animation-iteration-count: infinite;/* 动画执行次数 无限 */
+			animation-duration: 10s;/* 持续时间 */
+			animation-direction: alternate;/* 是否轮流反复播放 往返执行 */
+		}
+		#bg2{
+			z-index:-2;
+			background-image: url(../img/bg/bg2.jpg);/* 图片链接 */
+			background-repeat: no-repeat;/* 方式不重复 */
+			background-size: cover;/* 图片大小覆盖整个网页 */
+			background-position: bottom;/* 位置底部 */
+		}
+		@keyframes divbg{
+			0%{
+				opacity: 1;
+			}
+			25%{
+				opacity: 0;
+			}
+			50%{
+				opacity: 0;
+			}
+			75%{
+				opacity: 1;
+			}
+		}
+		@keyframes divbg1{
+			25%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 0;
+			}
+			75%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
+
+
+
+
+
