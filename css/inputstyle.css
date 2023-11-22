@@ -171,7 +171,7 @@
 		/* 手机 */
 		@media (max-width:900px){
 			body{
-				background-color: chocolate;
+				/* background-color: chocolate; */
 			}
 			#bg1{
 				position: fixed;
@@ -188,7 +188,7 @@
 		/* 平板 */
 		@media (min-width:901px) and (max-width:1200px){
 			body{
-				background-color: chartreuse;
+				/* background-color: chartreuse; */
 			}
 			#bg1{
 				position: fixed;	
@@ -200,14 +200,14 @@
 		/* 电脑 */
 		@media (min-width:1201px) and (max-width:1400px){
 			body{
-				background-color: pink;
+				/* background-color: pink; */
 			}
 		}
 		
 		/* 最大屏 */
 		@media (min-width:1401px){
 			body{
-				background-color: red;
+				/* background-color: red; */
 			}
 		}
 		
