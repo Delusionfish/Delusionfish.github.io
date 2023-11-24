@@ -5,19 +5,15 @@
 			user-select: none;
 			text-decoration: none;
 		}
-		.box-one{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
 		
+		/* 图片大盒子 */
 		.bgbox{
 			width: 100vw;
 			height: 100vh;
 			
 			position:fixed;	
 			top: 0;
-			}
+		}
 			
 		#bg1{
 			z-index:-1;
