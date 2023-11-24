@@ -1,0 +1,17 @@
+			
+			*{
+				padding: 0;
+				margin: 0;
+				user-select: none;
+				text-decoration: none;
+			}
+			
+			input[type='checkbox']{
+				display: none;/* 隐藏勾选框 */
+			}
+			
+			.return{
+				position: fixed;/* 固定 */
+				top: 2.4%;
+				right: 5%;
+			}

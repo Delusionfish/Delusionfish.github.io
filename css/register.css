@@ -6,21 +6,24 @@
 			text-decoration: none;
 		}
 		
+		/* 页面大盒子 */
 		.box-one{
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
 		
+		/* 登录表单大盒子 */
 		.box{
 			width: 100%;
-			height: 94vh;
+			height: 100vh;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
 		
-		#time{/* 时间 */
+		/* 时间 */
+		#time{
 			z-index: 1;
 			width: 120px;
 			height: 35px;
@@ -37,6 +40,7 @@
 			transition: 0.4s;
 		}
 		
+		/* 导航背景条 */
 		.index{
 			width: 100%;
 			height: 90px;
@@ -46,58 +50,21 @@
 			position: fixed;
 			top: 0;
 		}
-		/* 原神 */
+		
+		/* 导航-原神 */
 		.Genshin-Impact{
 			position: fixed;/* 固定 */
 			top: 2.4%;
 			right: 12%;
 		}
 		
-		/* 登录 */
+		/* 导航-登录 */
 		.header{
 			position: fixed;/* 固定 */
 			top: 2.4%;
 			right: 5%;
 		}
-		
-		/* 统一导航栏按钮样式 */
-		#buttonstyle{
-			z-index: 2;
-			width: 80px;
-			height: 55px;
-			border-radius: 15px;
-			box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.3);
-			font-size: 20px;
-			font-weight: 700;
-			color: rgba(231, 231, 231, 0.6);
-			background-color: rgba(255, 255, 255, 0.3);
-			
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		#buttonstyle::before{
-			z-index: -2;
-			content: "";
-			width: 100%;
-			height: 100%;
-			border-radius: 15px;
-			box-shadow: inset 4px 4px 4px 1px rgba(0, 0, 0, 0.3);/* 阴影颜色 */
-			
-			position: absolute;
-		}
-		#buttonstyle:hover{/* 悬停 */
-			box-shadow: 5px 4px 5px 2px rgba(50, 50, 50, 0.8);
-			color: rgba(0, 0, 0, 0.5);
-			transition:	0.3s;
-		}
-		#buttonstyle:active{/* 点击 */
-			color: rgba(255, 255, 255, 0.3);
-			background-color: rgba(0, 0, 0, 0.3);
-			box-shadow: none;
-			transition: 0.3s;
-		}
-		
+
 		/* 互动 */
 		input[type='checkbox']{
 			display: none;/* 隐藏勾选框 */
@@ -106,6 +73,7 @@
 			display: none;/* 互动时表单是否显示 */
 		}
 		
+		/* 表单 */
 		.loginform{
 			width: 100%;
 			height: 80vh;
@@ -114,7 +82,8 @@
 			align-items: center;
 			justify-content: center;
 		}
-			
+		
+		/* 登录 */	
 		.register{
 			z-index: 2;
 			width: 240px;
@@ -129,7 +98,6 @@
 			
 			position: relative;
 		} 
-
 		.register::before{/* 模糊 *//* after */
 			content: "";
 			width: calc(100% + 20px);
@@ -142,12 +110,14 @@
 			left: -10px;
 		}
 
+		/* 鱼妄妄 */
 		.register h2{
 			z-index: 1;
 			font-size: 18px;
 			font-weight: 600;
 		}
-
+		
+		/* 输入框 */
 		.register input{
 			margin: 6px 0;
 			height: 36px;
@@ -157,17 +127,13 @@
 			padding: 0 14px;
 			color:  rgba(0, 0, 0, 1.0);/* 光标颜色 */
 			z-index: 1;
-			
 		}
-
 		.register input::placeholder{/* 输入框内内置文字 */
 			color: #3d3d3d;/* 输入框内文字颜色 */
 		}
-
 		.register input:focus{/* 按钮和输入框的选中高亮 */
 			outline: none;/* 选中输入框高亮为0（取消） */
 		}
-
 		.register button:hover{/* 鼠标悬停在按钮上时 */
 			box-shadow: 3px 3px 3px 2px rgba(255, 255, 255, 0.5);
 			background-color: rgba(20, 30, 85, 0.5);/* 背景颜色 */
@@ -175,7 +141,7 @@
 		}
 		 
 		/* &times; */
-		.skip{
+		.exit{
 			z-index: 2;
 			
 			width: 50px;
@@ -194,15 +160,17 @@
 			
 			transition: 0.2s;
 		}
-		.skip:hover{
+		.exit:hover{
 			box-shadow: -3px 3px 5px 2px rgba(231, 231, 231, 0.5);
 			color: rgba(255, 0, 0, 0.7);
 			background-color: rgba(237, 235, 235, 0.3);
 		}
-		.skip:active{
+		.exit:active{
 			color: rgba(0, 0, 0, 0.3);
 			box-shadow:  -3px 3px 5px 2px rgba(255, 0, 0, 0.3);
 		}
+		
+		/* 登录按钮 */
 		.logon{
 			z-index: 3;
 			height: 36px;
