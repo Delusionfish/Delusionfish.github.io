@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 适配手机 -->
 		<link rel="icon" type="image/x-icon" href="img/logo/favicon.ico"><!-- logo -->
 		<link rel="stylesheet" href="css/bgstyle.css">
-		<link rel="stylesheet" href="css/inputstyle.css"/>
+		<link rel="stylesheet" href="css/register.css"/>
 		<script type="text/javascript">//.时间
 			window.onload=function(){
 				window.requestAnimationFrame(getDate)
@@ -16,49 +16,42 @@
 				window.requestAnimationFrame(getDate)
 				},1000/2)
 				var d=new Date();   
-				var year=d.getFullYear()  //获取年
-				var month=d.getMonth()+1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
-				var day=d.getDay()    //获取日
-				var days=d.getDate() //获取日期
 				var hour=d.getHours()   //获取小时
 				var minute=d.getMinutes()  //获取分钟
-				var second=d.getSeconds()   //获取秒	
-				if(month<10) month="0"+month
-				if(days<10) days="0"+days
 				if(hour<10) hour="0"+hour
 				if(minute<10) minute="0"+minute
-				if(second<10) second="0"+second
-				var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")
 				var Tools=document.getElementById("time")
-				var da=year+" 年 "+month+" 月 "+days+" 日 "+week[day]+" "+hour+" : "+minute+" :"+second
+				var da=hour+" : "+minute+" "
 				Tools.innerHTML=da
 				}
 		</script>
 	</head>
 	
 	<body>
-		<div class="header" >
-			<button>登录</button>
-		</div>
-		<div id="time" align="center"></div>
-		<div id="bg1" class="bgbox"></div>
-		<div id="bg2" class="bgbox"></div>
-		<div class="box">
-			<form action="#" class="login-form">
-					<a href="skip.html" class="skip" target="_blank">跳过</a>
-				<h2>@鱼妄妄</h2>
-				<br />
-				<input  type="text" name="username" placeholder="用户名"/><!-- 账号 -->
-				<input  type="password" name="password " placeholder="密码"/><!-- 密码 -->
-				<button class="#">登录</button><!-- 登录按钮 -->
-				<span>
-					<a href="#" class="register">注册</a>
-					<a href="#" class="forgot">忘记密码？</a><!-- 忘记密码前往重置 -->
-				</span>
-			</form>
+		<div class="index"></div>
+			<input type="checkbox" id="display">
+			<label for="display" class="header">登录</label>
+			<div id="time" align="center"></div>
+			<div id="bg1" class="bgbox"></div>
+			<div id="bg2" class="bgbox"></div>
+			<div id="bg3" class="bgbox"></div>
+			<div class="box">
+			<div class="wz">
+				<form action="#" class="register"><!-- 登录表单 -->
+					<label for="display" class="skip">&times;</label>
+					<h2>🎧鱼妄妄</h2>
+					<br />
+					<input  type="text" name="username" placeholder="用户名"/>
+					<input  type="password" name="password " placeholder="密码"/>
+					<button class="#">登录</button>
+					<span>
+						<a href="#" class="sign-up">注册</a>
+						<a href="#" class="forgot">忘记密码？</a>
+					</span>
+				</form>
+			</div>
 		</div>
 		<footer>鱼妄妄</footer>
-
 	</body>
 	
 </html>

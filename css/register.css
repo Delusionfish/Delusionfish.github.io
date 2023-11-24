@@ -1,0 +1,279 @@
+		
+		*{
+			padding: 0;
+			margin: 0;
+			user-select: none;
+			text-decoration: none;
+		}
+		
+		.box{
+			width: 100%;
+			height: 94vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		#time{/* 时间 */
+			z-index: 1;
+			font-size: 30px;
+			font-weight: 600;
+			color: rgba(255, 255, 255, 0.5);
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position:relative;
+			top: 30px;
+			transition: 0.4s;
+		}
+		
+		.index{
+			width: 100%;
+			height: 90px;
+			background-color: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(1px);
+			
+			position: fixed;
+			top: 0;
+		}
+		
+		.header{
+			z-index: 2;
+			width: 80px;
+			height: 55px;
+			border-radius: 15px;
+			box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.3);
+			font-size: 20px;
+			font-weight: 700;
+			color: rgba(231, 231, 231, 0.4);
+			background-color: rgba(255, 255, 255, 0.3);
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			position: fixed;/* 固定 */
+			top: 2.4%;
+			right: 5%;
+		}
+		.header:hover{/* 悬停 */
+			box-shadow: 5px 3px 5px 2px rgba(50, 50, 50, 0.8);
+			color: rgba(0, 0, 0, 0.5);
+			transition:	0.3s;
+		}
+		.header:active{/* 点击 */
+			color: rgba(255, 255, 255, 0.3);
+			background-color: rgba(0, 0, 0, 0.3);
+			box-shadow: none;
+			transition: 0.5s;
+		}
+		
+		/* 互动 */
+		input[type='checkbox']{
+			display: none;/* 隐藏勾选框 */
+		}
+		#display:checked ~ .box{
+			display: none;/* 互动时表单是否显示 */
+		}
+
+		.wz{
+			width: 100%;
+			height: 80vh;
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+			
+		.register{
+			z-index: 2;
+			width: 240px;
+			height: 240px;
+			padding: 40px;
+			border-radius: 18px;
+			text-align: center;
+			overflow: hidden;/* 清除浮动 */
+			
+			display: flex;
+			flex-direction: column;/* 内容排列方式从上往下 */
+			
+			position: relative;
+		} 
+
+		.register::before{/* 模糊 *//* after */
+			content: "";
+			width: calc(100% + 20px);
+			height: calc(100% + 20px);
+			box-shadow: inset 0 0 0 200px rgba(255,255,255,0.35);/* 阴影颜色 */
+			backdrop-filter: blur(4px);
+			
+			position: absolute;
+			top: -10px;
+			left: -10px;
+		}
+
+		.register h2{
+			z-index: 1;
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		.register input,
+		.register button{
+			margin: 6px 0;
+			height: 36px;
+			border: none;/* 边框 没有 */
+			background-color: rgba(124, 124, 124, 0.3);
+			border-radius: 4px;
+			padding: 0 14px;
+			color:  rgba(0, 0, 0, 1.0);/* 光标颜色 */
+			z-index: 1;
+			
+		}
+
+		.register input::placeholder{/* 输入框内内置文字 */
+			color: #3d3d3d;/* 输入框内文字颜色 */
+		}
+
+		.register button:focus,
+		.register input:focus{/* 按钮和输入框的选中高亮 */
+			outline: none;/* 选中输入框高亮为0（取消） */
+		}
+
+		.register a{
+			z-index:2;
+			text-align: right;
+			font-size: 14px;
+			width: 120px;
+		}
+
+		.register button{
+			margin-top: 24px;/* 上外边距 */
+			background-color:rgba(10, 10, 10, 0.3);
+			color: rgba(255, 255, 255, 0.5);
+			/* box-shadow: 1px 1px 3px 2px rgba(255, 255, 255, 0.5); */
+			
+			position: relative;
+			/* overflow: hidden; */
+			cursor: pointer;/* 鼠标悬停样式 */
+			transition: 0.4s;
+		}
+
+		.register button:hover{/* 鼠标悬停在按钮上时 */
+			box-shadow: 3px 3px 3px 2px rgba(255, 255, 255, 0.5);
+			background-color: rgba(20, 30, 85, 0.5);/* 背景颜色 */
+			transition: 0.5s;
+		}
+		.register button:active{
+			color: rgba(20, 30, 85, 0.8);
+			background-color: rgba(255, 255, 255, 0.5);
+			box-shadow: none;
+			transition: 0.5s;
+		}
+		 
+		/* &times; */
+		.skip{
+			z-index: 2;
+			
+			width: 50px;
+			height: 50px;
+			border-radius: 0px 0px 0px 10px;
+			font-size: 40px;
+			font-weight: 300;
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			position: absolute;
+			top: 0%;
+			left: 84%;
+			
+			transition: 0.2s;
+		}
+		.skip:hover{
+			box-shadow: -3px 3px 5px 2px rgba(231, 231, 231, 0.5);
+			color: rgba(255, 0, 0, 0.7);
+			background-color: rgba(237, 235, 235, 0.3);
+		}
+		.skip:active{
+			color: rgba(0, 0, 0, 0.3);
+			box-shadow:  -3px 3px 5px 2px rgba(255, 0, 0, 0.3);
+		}
+		
+		/* 注册 忘记密码 */
+		.sign-up{
+			position: sticky;
+			right: 100%;
+		}
+		.forgot{
+			position: sticky;
+			left: 100%;
+		}
+		/* 前 后 时*/
+		a:link,
+		a:visited,
+		a:active{
+			color: rgba(255, 255, 255, 0.5);
+			}
+			/* 悬浮*/
+		a:hover{
+			color: rgba(0, 0, 0, 0.5);
+			}
+			
+		/* 页脚 */
+		footer{
+			z-index: 1;
+			position: absolute;/* 相对位置 */
+			bottom: 10px;
+			right: 10px;
+		}
+
+
+		/* 手机 */
+		@media (max-width:900px){
+			body{
+				/* background-color: chocolate; */
+			}
+		}
+		
+		/* 平板 */
+		@media (min-width:901px) and (max-width:1200px){
+			body{
+				/* background-color: chartreuse; */
+			}
+		}
+		
+		/* 电脑 */
+		@media (min-width:1201px) and (max-width:1400px){
+			body{
+				/* background-color: pink; */
+			}
+		}
+		
+		/* 最大屏 */
+		@media (min-width:1401px){
+			body{
+				/* background-color: red; */
+			}
+		}
+		
+		@media (max-width:580px){
+			#time{
+				position:relative;
+				top: 140px;
+			}
+		}
+		
+		@media (max-width:440px){
+			#time{
+				visibility: hidden;/* 隐藏 */
+			}
+		}
+		
+		@media (max-width:320px){
+			
+		}
+
+		
