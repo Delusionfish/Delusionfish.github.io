@@ -6,6 +6,12 @@
 			text-decoration: none;
 		}
 		
+		.box-one{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
 		.box{
 			width: 100%;
 			height: 94vh;
@@ -16,6 +22,9 @@
 		
 		#time{/* 时间 */
 			z-index: 1;
+			width: 120px;
+			height: 35px;
+			/* background-color: #ffaa00; */
 			font-size: 30px;
 			font-weight: 600;
 			color: rgba(255, 255, 255, 0.5);
@@ -23,8 +32,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			position:relative;
-			top: 30px;
+			position:absolute;
+			top: 27px;
 			transition: 0.4s;
 		}
 		
@@ -37,8 +46,22 @@
 			position: fixed;
 			top: 0;
 		}
+		/* 原神 */
+		.Genshin-Impact{
+			position: fixed;/* 固定 */
+			top: 2.4%;
+			right: 12%;
+		}
 		
+		/* 登录 */
 		.header{
+			position: fixed;/* 固定 */
+			top: 2.4%;
+			right: 5%;
+		}
+		
+		/* 统一导航栏按钮样式 */
+		#buttonstyle{
 			z-index: 2;
 			width: 80px;
 			height: 55px;
@@ -46,27 +69,33 @@
 			box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.3);
 			font-size: 20px;
 			font-weight: 700;
-			color: rgba(231, 231, 231, 0.4);
+			color: rgba(231, 231, 231, 0.6);
 			background-color: rgba(255, 255, 255, 0.3);
 			
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			
-			position: fixed;/* 固定 */
-			top: 2.4%;
-			right: 5%;
 		}
-		.header:hover{/* 悬停 */
-			box-shadow: 5px 3px 5px 2px rgba(50, 50, 50, 0.8);
+		#buttonstyle::before{
+			z-index: -2;
+			content: "";
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+			box-shadow: inset 4px 4px 4px 1px rgba(0, 0, 0, 0.3);/* 阴影颜色 */
+			
+			position: absolute;
+		}
+		#buttonstyle:hover{/* 悬停 */
+			box-shadow: 5px 4px 5px 2px rgba(50, 50, 50, 0.8);
 			color: rgba(0, 0, 0, 0.5);
 			transition:	0.3s;
 		}
-		.header:active{/* 点击 */
+		#buttonstyle:active{/* 点击 */
 			color: rgba(255, 255, 255, 0.3);
 			background-color: rgba(0, 0, 0, 0.3);
 			box-shadow: none;
-			transition: 0.5s;
+			transition: 0.3s;
 		}
 		
 		/* 互动 */
@@ -76,8 +105,8 @@
 		#display:checked ~ .box{
 			display: none;/* 互动时表单是否显示 */
 		}
-
-		.wz{
+		
+		.loginform{
 			width: 100%;
 			height: 80vh;
 			
@@ -119,8 +148,7 @@
 			font-weight: 600;
 		}
 
-		.register input,
-		.register button{
+		.register input{
 			margin: 6px 0;
 			height: 36px;
 			border: none;/* 边框 没有 */
@@ -136,39 +164,13 @@
 			color: #3d3d3d;/* 输入框内文字颜色 */
 		}
 
-		.register button:focus,
 		.register input:focus{/* 按钮和输入框的选中高亮 */
 			outline: none;/* 选中输入框高亮为0（取消） */
-		}
-
-		.register a{
-			z-index:2;
-			text-align: right;
-			font-size: 14px;
-			width: 120px;
-		}
-
-		.register button{
-			margin-top: 24px;/* 上外边距 */
-			background-color:rgba(10, 10, 10, 0.3);
-			color: rgba(255, 255, 255, 0.5);
-			/* box-shadow: 1px 1px 3px 2px rgba(255, 255, 255, 0.5); */
-			
-			position: relative;
-			/* overflow: hidden; */
-			cursor: pointer;/* 鼠标悬停样式 */
-			transition: 0.4s;
 		}
 
 		.register button:hover{/* 鼠标悬停在按钮上时 */
 			box-shadow: 3px 3px 3px 2px rgba(255, 255, 255, 0.5);
 			background-color: rgba(20, 30, 85, 0.5);/* 背景颜色 */
-			transition: 0.5s;
-		}
-		.register button:active{
-			color: rgba(20, 30, 85, 0.8);
-			background-color: rgba(255, 255, 255, 0.5);
-			box-shadow: none;
 			transition: 0.5s;
 		}
 		 
@@ -200,6 +202,33 @@
 		.skip:active{
 			color: rgba(0, 0, 0, 0.3);
 			box-shadow:  -3px 3px 5px 2px rgba(255, 0, 0, 0.3);
+		}
+		.logon{
+			z-index: 3;
+			height: 36px;
+			margin: 6px 0;
+			overflow: hidden;
+			border-radius: 4px;
+			font-size: 20px;
+			font-weight: 600;
+			color: rgba(255, 255, 255, 0.5);
+			background-color: rgba(124, 124, 124, 0.4);
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			transition: 0.1s;
+		}
+		.logon:hover{
+			color: rgba(0, 0, 0, 0.5);
+			box-shadow: 3px 3px 2px 2px rgba(255, 255, 255, 0.5);
+			transition: 0.3s;
+		}
+		.logon:active{
+			color:rgba(0, 0, 0, 0.3);
+			background-color: rgba(124124 124124, 124124, 0.3);
+			box-shadow: 3px 3px 2px 2px rgba(124, 124, 124, 0.5);
 		}
 		
 		/* 注册 忘记密码 */
@@ -259,21 +288,42 @@
 			}
 		}
 		
-		@media (max-width:580px){
+		@media (max-width:600px){
 			#time{
-				position:relative;
-				top: 140px;
+				top: 120px;
 			}
 		}
 		
 		@media (max-width:440px){
 			#time{
-				visibility: hidden;/* 隐藏 */
+				/* visibility: hidden;/* 隐藏 */ */
 			}
 		}
 		
-		@media (max-width:320px){
-			
+		@media (max-width:1300px){
+			.Genshin-Impact{
+				right: 15%;
+				transition: 0.2s;
+			}
 		}
+		@media (max-width:920px){
+			.Genshin-Impact{
+				right: 21%;
+				transition: 0.2s;
+			}
+		}
+		@media (max-width:700px){
+			.Genshin-Impact{
+				right: 27%;
+				transition: 0.2s;
+			}
+		}
+		@media (max-width:570px){
+			.Genshin-Impact{
+				right: 30%;
+				transition: 0.2s;
+			}
+		}
+		
 
 		

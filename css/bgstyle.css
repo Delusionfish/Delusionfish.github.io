@@ -1,7 +1,20 @@
-
+		
+		*{
+			padding: 0;
+			margin: 0;
+			user-select: none;
+			text-decoration: none;
+		}
+		.box-one{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
 		.bgbox{
-			height: 100vh;
 			width: 100vw;
+			height: 100vh;
+			
 			position:fixed;	
 			top: 0;
 			}
