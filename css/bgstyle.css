@@ -1,11 +1,4 @@
-		
-		*{
-			padding: 0;
-			margin: 0;
-			user-select: none;
-			text-decoration: none;
-		}
-		
+
 		/* 图片大盒子 */
 		.bgbox{
 			width: 100vw;
@@ -17,7 +10,7 @@
 			
 		#bg1{
 			z-index:-1;
-			background-image: url(../img/bg/bg1.jpg);
+			background-image: url(../img/background/bg1.jpg);
 			background-repeat: no-repeat;/* 方式不重复 */
 			background-size: cover;/* 图片大小覆盖整个网页 */
 			background-position: bottom;/* 位置底部 */
@@ -30,7 +23,7 @@
 		}
 		#bg2{
 			z-index:-2;
-			background-image: url(../img/bg/bg2.jpg);
+			background-image: url(../img/background/bg2.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: bottom;
@@ -42,7 +35,7 @@
 		}
 		#bg3{
 			z-index:-3;
-			background-image: url(../img/bg/bg3.jpg);
+			background-image: url(../img/background/bg3.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: bottom;

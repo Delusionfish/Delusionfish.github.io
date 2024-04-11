@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>鱼妄妄</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 适配手机 -->
-		<link rel="icon" type="image/x-icon" href="img/logo/favicon.ico"><!-- logo -->
-		<link rel="stylesheet" href="css/bgstyle.css">
-		<link rel="stylesheet" href="css/register.css">
-		<link rel="stylesheet" href="css/buttonstyle.css">
-		<script type="text/javascript">//.时间
-			window.onload=function(){
-				window.requestAnimationFrame(getDate)
-				}
-			function getDate(){
-				window.setTimeout(function(){
-				window.requestAnimationFrame(getDate)
-				},1000/2)
-				var d=new Date();   
-				var hour=d.getHours()   //获取小时
-				var minute=d.getMinutes()  //获取分钟
-				if(hour<10) hour="0"+hour
-				if(minute<10) minute="0"+minute
-				var Tools=document.getElementById("time")
-				var da=hour+" : "+minute+" "
-				Tools.innerHTML=da
-				}
-		</script>
-	</head>
-	
-	<body>
-		<div class="box-one">
-		<div class="index"></div>
-			<input type="checkbox" id="display">
-			<label for="display" id="buttonstyle" class="header">登录</label>
-			<input type="checkbox" id="GenshinImpact" onclick="location.href='GenshinImpact.html'">
-			<label for="GenshinImpact" id="buttonstyle" class="Genshin-Impact">原神</label>
-			<div id="time" align="center"></div>
-			<div id="bg1" class="bgbox"></div>
-			<div id="bg2" class="bgbox"></div>
-			<div id="bg3" class="bgbox"></div>
-			<div class="box">
-			<div class="loginform">
-				<form action="#" class="register"><!-- 登录 -->
-					<label for="display" class="exit">&times;</label>
-					<h2>🎧鱼妄妄</h2>
-					<br />
-					<input 	type="text" name="username" placeholder="用户名"/>
-					<input  type="password" name="password " placeholder="密码"/>
-					<input type="checkbox" id="GenshinImpact-f" onclick="location.href='GenshinImpact.html'">
-					<label for="GenshinImpact-f" class="logon">登录</label>
-					<span>
-						<a href="" class="sign-up">注册</a>
-						<a href="" class="forgot">忘记密码？</a>
-					</span>
-				</form>
-			</div>
-		</div>
-		</div>
-		<footer>鱼妄妄</footer>
-	</body>
-	
+
+<head>
+  <meta charset="utf-8" />
+  <title>鱼妄妄</title>
+  <!-- <meta http-equiv="refresh" content="5;url=Genshinlmpact.html"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <!-- 适配手机 -->
+  <link rel="icon" type="image/x-icon" href="img/icon/lbxx.ico" />
+  <link rel="stylesheet" href="css/bgstyle.css" />
+  <link rel="stylesheet" href="css/register.css" />
+  <link rel="stylesheet" href="css/buttonstyle.css" />
+  <script type="text/javascript">
+    //.时间
+    window.onload = function () {
+      window.requestAnimationFrame(getDate);
+    };
+    function getDate() {
+      window.setTimeout(function () {
+        window.requestAnimationFrame(getDate);
+      }, 1000 / 2);
+      var d = new Date();
+      var hour = d.getHours(); //获取小时
+      var minute = d.getMinutes(); //获取分钟
+      if (hour < 10) hour = "0" + hour;
+      if (minute < 10) minute = "0" + minute;
+      var Tools = document.getElementById("time");
+      var da = hour + " : " + minute + " ";
+      Tools.innerHTML = da;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="time"></div>
+  <div class="box-one">
+    <div class="index"></div>
+    <input type="checkbox" id="display" />
+    <label for="display" id="buttonstyle" class="header">登录</label>
+    <button id="buttonstyle" class="Genshin-Impact" onclick="window.open('wal.html')">
+      原神
+    </button>
+    <div id="time" align="center"></div>
+    <div id="bg1" class="bgbox"></div>
+    <div id="bg2" class="bgbox"></div>
+    <div id="bg3" class="bgbox"></div>
+    <div class="box">
+      <div class="loginform">
+        <form class="register" action="wal.html">
+          <!-- 登录 -->
+          <label for="display" class="exit">&times;</label>
+          <h2>
+            <svg t="1701339107495" class="form-icon-hua" viewBox="0 0 1077 1024" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" p-id="4821" width="200" height="200">
+              <path
+                d="M919.081687 624.098863c147.311764-47.786499 150.365788-224.380967 150.365789-231.746555a17.964849 17.964849 0 0 0-3.59297-10.77891c-4.311564-6.108049-110.483823-147.132115-257.795587-99.165968a380.675156 380.675156 0 0 0-112.459956 60.541542 377.261834 377.261834 0 0 0 22.995007-125.753945C718.59397 62.338027 551.70052 4.850509 544.694229 2.515079a17.964849 17.964849 0 0 0-11.497503 0c-7.006291 2.33543-173.899741 59.822948-173.899741 215.578191a379.597265 379.597265 0 0 0 22.995007 125.753945A381.393749 381.393749 0 0 0 269.472739 282.40743C122.340623 234.441283 16.348013 375.465349 12.036449 381.573398a17.964849 17.964849 0 0 0-3.59297 10.77891c0 7.365588 3.054024 183.960056 150.365788 231.746555a375.285701 375.285701 0 0 0 126.652188 17.066607 377.261834 377.261834 0 0 0-92.518974 88.027761c-91.081786 125.753945 10.239964 269.472739 14.731176 275.940084a16.348013 16.348013 0 0 0 9.162073 6.646995A316.360995 316.360995 0 0 0 305.402437 1023.996407c127.55043 0 197.613342-76.350609 233.54304-197.613342 36.827941 121.981326 106.531556 197.613342 233.543041 197.613342a316.360995 316.360995 0 0 0 88.387058-12.395746 16.348013 16.348013 0 0 0 9.162073-6.646994c4.491212-6.108049 105.812962-150.545437 14.731176-275.940085a383.549531 383.549531 0 0 0-92.339325-88.027761 377.261834 377.261834 0 0 0 126.652187-16.886958zM538.945477 38.983723c27.306571 10.77891 143.718794 63.775215 143.718794 178.390953 0 103.65718-58.565409 211.266627-123.598162 291.389855-3.233673-1.257539-2.155782 16.168364-2.155782-201.565609a17.964849 17.964849 0 0 0-35.929699 0v187.193729a711.228382 711.228382 0 0 0-73.116936-91.800379A397.023168 397.023168 0 0 1 395.226683 217.374676c0-114.256441 116.412223-167.432395 143.718794-178.390953zM169.947474 589.965649c-108.687338-35.929698-123.418514-162.581886-125.753945-191.86459 17.964849-22.63571 104.91472-116.951169 213.961355-81.560415 98.806671 32.15708 182.882165 120.903435 238.932495 207.853305-1.796485 2.33543 13.653285 6.108049-192.223887-60.541541a17.964849 17.964849 0 0 0-11.138207 34.133213l178.031656 57.846815a695.598963 695.598963 0 0 0-110.124526 41.498801 397.202817 397.202817 0 0 1-191.684941-7.365588zM454.510686 919.261336c-67.008888 92.518974-192.403535 67.188536-220.967646 60.002596-15.809067-24.97114-78.68604-136.532854-11.497503-228.872179 60.361893-82.997604 171.743959-136.712503 271.448872-162.941183 1.616836 2.515079 9.880667-10.419613-116.951169 164.198722A17.964849 17.964849 0 0 0 405.646296 772.488518l110.124526-151.623328a698.652987 698.652987 0 0 0 5.209806 116.951169 393.430198 393.430198 0 0 1-66.469942 181.444977zM538.945477 576.671661a17.964849 17.964849 0 1 1 0-35.929699 17.964849 17.964849 0 0 1 0 35.929699z m316.899941 173.720092c67.188536 92.339325 4.311564 203.901039-11.497503 228.872179-28.56411 7.18594-153.958758 32.516377-220.967646-60.002596-61.080487-84.075494-76.709906-204.97893-71.859397-308.456462 2.874376 0-7.545237-13.832934 120.005193 161.683644A17.964849 17.964849 0 1 0 700.629121 751.649292l-109.585581-151.623327a709.611545 709.611545 0 0 0 114.256441 31.797783 398.101059 398.101059 0 0 1 150.545437 118.568005zM592.840025 562.120133c0-3.054024-13.473637 2.515079 191.145996-64.134512a17.964849 17.964849 0 0 0-11.138206-34.133213L594.816159 520.980628a711.587679 711.587679 0 0 0 64.673457-98.267725 399.897544 399.897544 0 0 1 159.70751-106.890853c107.789095-35.929698 195.277911 58.924706 213.961354 81.560415-1.796485 29.462353-16.168364 156.473837-125.753945 191.86459-97.908428 32.875674-217.554324 10.599261-314.56451-27.126922z"
+                p-id="4822" fill="#d81e06"></path>
+            </svg>
+            鱼妄妄
+          </h2>
+          <br />
+          <input type="text" name="username" placeholder="用户名" />
+          <input type="password" name="password " placeholder="密码" />
+          <button class="logon">登录</button>
+          <span>
+            <a href="zc.html">注册</a>
+            <a href="wj.html">忘记密码？</a>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>计算机2201钟智轩</footer>
+</body>
+
 </html>

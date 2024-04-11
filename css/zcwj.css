@@ -1,0 +1,99 @@
+			*{
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				user-select: none;
+			}
+			body{
+				box-sizing: border-box;
+			}
+			.sy,.zcwj{
+				width: 100px;
+				height: 30px;
+				border-radius: 8px;
+				background-color: rgba(255, 255, 255, 0.4);
+				backdrop-filter: blur(1px);
+				text-align: center;
+				display: block;
+				position: relative;
+				top: 10px;
+				left: 10px;
+				
+				transition: 0.3s;
+			}
+			.zcwj{
+				top: 20px;
+			}
+			.sy span,.zcwj span{
+				position: relative;
+				top: 4.6px;
+			}
+			.h1{
+				color: rgba(255, 255, 255, 0.8);
+			}
+			.reg{
+				display:flex;
+				justify-content:center;
+			}
+			p{
+				text-align: center;
+				font-size:40px;
+				margin:0 0 100px 0;
+			}
+			.register{
+				background-color: rgba(255, 255, 255, 0.3);
+				backdrop-filter: blur(4px);
+				padding: 40px;
+				border-radius: 18px;
+				text-align: center;
+				overflow: hidden;
+				
+				display: flex;
+				flex-direction: column;/* 内容排列方式从上往下 */
+			}
+			.register input,button{
+				height: 20px;
+				border: none;
+				border-radius: 5px;
+				padding: 10px 10px 10px 10px;
+				margin:5px 0;
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+			.register input:focus{
+				outline: none;
+			}
+			button{
+				cursor: pointer;
+				height: 40px;
+				width:100%;
+				font-size: 15px;
+				font-weight: 500;
+				color: rgba(26, 26, 26, 0.8);
+				transition: 0.3s;
+			}
+			button:hover,.sy:hover,.zcwj:hover{
+				box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+			}
+			button:active,.sy:active,.zcwj:active{
+				background-color: rgba(75, 75, 75, 0.5);
+				box-shadow: 4px 4px 4px 2px rgba(255, 255, 255, 0.5);
+				color: rgba(255, 255, 255, 0.8);
+			}
+			.or{
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+			}
+			.id{
+				position: relative;
+				top: -4px;
+			}
+			a:visited{
+				color: rgba(0, 0, 0, 0.8);
+			}
+			a:active{
+				color: rgba(170, 0, 0, 0.9);
+			}
+			a:hover{
+				color: rgba(0, 0, 0, 0.5);
+			}
