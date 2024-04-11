@@ -28,7 +28,7 @@
 			.story-content,.name-content,.about-content{
 				max-width: 90%;
 				max-height: 750px;
-				overflow: hidden;
+				/* overflow: hidden; */
 			}
 			#wal-cd{
 				width: 140px;
@@ -38,6 +38,11 @@
 			}
 			.wal-id, .wal-eye, .wal-Destiny, .wal-title{
 				margin: 0 0 15px 0 ;
+			}
+		}
+		@media (max-width:490px) {
+			.story-content,.name-content,.about-content{
+				overflow: hidden;
 			}
 		}
 		@media (max-width:334px) {
